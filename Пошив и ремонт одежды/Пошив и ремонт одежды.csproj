@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62671C3B-C989-4D26-93C2-E33AEC07031A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Пошив_и_ремонт_одежды</RootNamespace>
+    <AssemblyName>Пошив и ремонт одежды</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cut.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmailMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailMessageForm.Designer.cs">
+      <DependentUpon>EmailMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email\EmailService.cs" />
+    <Compile Include="EntityManager.cs" />
+    <Compile Include="FormНачальное окно регистрации.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormНачальное окно регистрации.Designer.cs">
+      <DependentUpon>FormНачальное окно регистрации.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Вход в программу Клиент.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Вход в программу Клиент.Designer.cs">
+      <DependentUpon>Вход в программу Клиент.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Вход в программуАдминистратор.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Вход в программуАдминистратор.Designer.cs">
+      <DependentUpon>Вход в программуАдминистратор.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавление заказа.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление заказа.Designer.cs">
+      <DependentUpon>Добавление заказа.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДобавлениеКлиента.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДобавлениеКлиента.Designer.cs">
+      <DependentUpon>ДобавлениеКлиента.cs</DependentUpon>
+    </Compile>
+    <Compile Include="пошив_и_ремонт_одеждыDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>пошив_и_ремонт_одеждыDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmailMessageForm.resx">
+      <DependentUpon>EmailMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormНачальное окно регистрации.resx">
+      <DependentUpon>FormНачальное окно регистрации.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Вход в программу Клиент.resx">
+      <DependentUpon>Вход в программу Клиент.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Вход в программуАдминистратор.resx">
+      <DependentUpon>Вход в программуАдминистратор.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление заказа.resx">
+      <DependentUpon>Добавление заказа.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДобавлениеКлиента.resx">
+      <DependentUpon>ДобавлениеКлиента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="пошив_и_ремонт_одеждыDataSet.xsc">
+      <DependentUpon>пошив_и_ремонт_одеждыDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="пошив_и_ремонт_одеждыDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>пошив_и_ремонт_одеждыDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="пошив_и_ремонт_одеждыDataSet.xss">
+      <DependentUpon>пошив_и_ремонт_одеждыDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cut.ico" />
+    <Content Include="пошив и ремонт одежды.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
